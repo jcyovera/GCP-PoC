@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 
 const gapiClientConfig: NgGapiClientConfig = {
@@ -41,7 +42,8 @@ const gapiClientConfig: NgGapiClientConfig = {
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
