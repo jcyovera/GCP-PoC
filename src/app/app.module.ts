@@ -12,6 +12,7 @@ import {
   GoogleApiConfig
 } from 'ng-gapi';
 import { HttpClientModule } from '@angular/common/http';
+import {FormsModule } from '@angular/forms';
 
 
 const gapiClientConfig: NgGapiClientConfig = {
@@ -35,7 +36,8 @@ const gapiClientConfig: NgGapiClientConfig = {
       provide: NG_GAPI_CONFIG,
       useValue: gapiClientConfig
     }),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

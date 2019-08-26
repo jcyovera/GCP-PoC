@@ -4,6 +4,9 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<button (click)="signIn()">sign in</button>
+<input type="text" [(ngModel)]='jobName' id="txtJobName"/>
+<br/>
+<br/>
+<button (click)="signIn()">sign in</button>&nbsp;
 <button (click)="loadDataFlow()">Execute</button>
 <router-outlet></router-outlet>
