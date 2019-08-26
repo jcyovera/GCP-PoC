@@ -11,6 +11,9 @@ import { DataPrepService } from './shared/services/data-prep.service';
 export class AppComponent {
   title = 'google-oauth-app';
   jobName: string;
+  inputLocations: string;
+  outputLocations: string;
+
   constructor( private gapiService: GoogleApiService,
                private googleFilesService: UserService,
                private dataPrepService: DataPrepService) {

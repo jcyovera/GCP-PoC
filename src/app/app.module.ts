@@ -13,6 +13,8 @@ import {
 } from 'ng-gapi';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
 
 
 const gapiClientConfig: NgGapiClientConfig = {
@@ -37,7 +39,9 @@ const gapiClientConfig: NgGapiClientConfig = {
       useValue: gapiClientConfig
     }),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
