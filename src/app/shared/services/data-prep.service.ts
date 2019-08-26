@@ -16,7 +16,11 @@ export class DataPrepService {
     // tslint:disable-next-line: max-line-length
     `https://dataflow.googleapis.com/v1b3/projects/ghire-freddy-vargas-etl-test/locations/us-central1/templates:launch?gcsPath=gs%3A%2F%2Fdataprep-staging-e6fbd213-f292-4f5a-a1f2-ecb2b4529d6a%2Ffvargas%40belatrixsf.com%2Ftemp%2Fcloud-dataprep-candidates-2972361-by-fvargas_template`;
   resource = {
+<<<<<<< HEAD
     "jobName": "restful-test6",
+=======
+    "jobName": "restful-test8",
+>>>>>>> master
     "parameters": {
       "inputLocations": "{\"location1\":\"gs://dataprep-staging-e6fbd213-f292-4f5a-a1f2-ecb2b4529d6a/fvargas@belatrixsf.com/INPUTS/workable/workable_jobs_input.xlsx\", \"location2\":\"gs://dataprep-staging-e6fbd213-f292-4f5a-a1f2-ecb2b4529d6a/fvargas@belatrixsf.com/INPUTS/workable/workable_jobs_input.xlsx\", \"location3\":\"gs://dataprep-staging-e6fbd213-f292-4f5a-a1f2-ecb2b4529d6a/fvargas@belatrixsf.com/INPUTS/workable/workable_jobs_input.xlsx\"}",
       "outputLocations": "{\"location1\":\"gs://dataprep-staging-e6fbd213-f292-4f5a-a1f2-ecb2b4529d6a/fvargas@belatrixsf.com/OUTPUTS/workable/job_workable.csv\",\"location2\":\"gs://dataprep-staging-e6fbd213-f292-4f5a-a1f2-ecb2b4529d6a/fvargas@belatrixsf.com/OUTPUTS/workable/job_workable.csv\",\"location3\":\"gs://dataprep-staging-e6fbd213-f292-4f5a-a1f2-ecb2b4529d6a/fvargas@belatrixsf.com/OUTPUTS/workable/job_workable.csv\"}"
@@ -42,4 +46,3 @@ export class DataPrepService {
 }
 
 // POST https://dataflow.googleapis.com/v1b3/projects/ghire-freddy-vargas-etl-test/locations/us-central1/templates:launch?gcsPath=gs%3A%2F%2Fdataprep-staging-e6fbd213-f292-4f5a-a1f2-ecb2b4529d6a%2Ffvargas%40belatrixsf.com%2Ftemp%2Fcloud-dataprep-candidates-2972361-by-fvargas_template&key=[YOUR_API_KEY] HTTP/1.1
-
