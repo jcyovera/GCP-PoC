@@ -13,6 +13,7 @@ export class AppComponent {
   jobName: string;
   inputLocations: string;
   outputLocations: string;
+  result = '';
 
   constructor( private gapiService: GoogleApiService,
                private googleFilesService: UserService,
@@ -27,6 +28,7 @@ export class AppComponent {
     // tslint:disable-next-line: max-line-length
     this.dataPrepService.getFiles(this.googleFilesService.getToken(), this.jobName.trim(), this.inputLocations.trim(), this.outputLocations.trim()).subscribe((res) => {
       console.log(res);
+      this.result = res;
 
     });
   }
