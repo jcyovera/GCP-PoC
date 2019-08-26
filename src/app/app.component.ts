@@ -24,7 +24,8 @@ export class AppComponent {
   }
 
   loadDataFlow() {
-    this.dataPrepService.getFiles(this.googleFilesService.getToken(), this.jobName.trim()).subscribe((res) => {
+    // tslint:disable-next-line: max-line-length
+    this.dataPrepService.getFiles(this.googleFilesService.getToken(), this.jobName.trim(), this.inputLocations.trim(), this.outputLocations.trim()).subscribe((res) => {
       console.log(res);
 
     });

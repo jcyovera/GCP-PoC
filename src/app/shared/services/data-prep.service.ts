@@ -28,7 +28,7 @@ export class DataPrepService {
   constructor(private httpClient: HttpClient) {
   }
 
-  public getFiles(authtoken: string, jobName: string, inputLocations: string, outputLocations: string): Observable<any> {
+  public getFiles(authtoken: string, jobName: string, inputLocations?: string, outputLocations?: string): Observable<any> {
     this.resource.jobName = jobName;
     this.resource.parameters.inputLocations = inputLocations;
     this.resource.parameters.outputLocations = outputLocations;

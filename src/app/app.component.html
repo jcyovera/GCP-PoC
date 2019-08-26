@@ -4,19 +4,22 @@
     PoC google
   </h1>
 </div>
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Job Name" [(ngModel)]='jobName'>
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Input Locations" [(ngModel)]="inputLocations"></textarea>
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Output Locations" [(ngModel)]="outputLocations"></textarea>
-  </mat-form-field>
-</form>
-<br/>
-<br/>
-<button mat-raised-button (click)="signIn()">sign in</button>&nbsp;
-<button  mat-raised-button color="primary" (click)="loadDataFlow()">Execute</button>
+<div >
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Job Name" [(ngModel)]='jobName'>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Input Locations" [(ngModel)]="inputLocations"></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Output Locations" [(ngModel)]="outputLocations"></textarea>
+    </mat-form-field>
+  </form>
+  <br/>
+  <br/>
+  <button mat-raised-button (click)="signIn()">sign in</button>&nbsp;
+  <button  mat-raised-button color="primary" (click)="loadDataFlow()">Execute</button>
+</div>
+
 <router-outlet></router-outlet>
