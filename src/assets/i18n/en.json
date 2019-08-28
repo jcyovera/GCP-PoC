@@ -1,0 +1,27 @@
+{
+  "header": {
+      "title" : "Welcome google-oauth-app",
+      "search": "Search",
+      "avatar": {
+          "myProfile": "My profile",
+          "myAccount": "My account",
+          "myLogout": "Log out"
+      }
+  },
+  "language_dropdown": {
+      "Items": [
+          {
+              "id": "en",
+              "text": "English"
+          },
+          {
+              "id": "es",
+              "text": "Spanish"
+          },
+          {
+              "id": "fr",
+              "text": "French"
+          }
+      ]
+  }
+}

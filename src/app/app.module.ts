@@ -11,11 +11,13 @@ import {
   NG_GAPI_CONFIG,
   GoogleApiConfig
 } from 'ng-gapi';
-import { HttpClientModule } from '@angular/common/http';
 import {FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 const gapiClientConfig: NgGapiClientConfig = {
@@ -28,6 +30,10 @@ const gapiClientConfig: NgGapiClientConfig = {
     'https://www.googleapis.com/auth/userinfo.email'
   ].join(' ')
 };
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 @NgModule({
   declarations: [
     AppComponent
@@ -43,7 +49,16 @@ const gapiClientConfig: NgGapiClientConfig = {
     FormsModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    TranslateModule.forRoot(
+      {
+        loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+      }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

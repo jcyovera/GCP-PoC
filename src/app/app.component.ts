@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { GoogleApiService } from 'ng-gapi';
 import { UserService } from './shared/services/google-drive.service';
 import { DataPrepService } from './shared/services/data-prep.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { DataPrepService } from './shared/services/data-prep.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'google-oauth-app';
+  title = 'Welcome google-oauth-app';
   jobName: string;
   inputLocations: string;
   outputLocations: string;
@@ -17,8 +18,14 @@ export class AppComponent {
 
   constructor( private gapiService: GoogleApiService,
                private googleFilesService: UserService,
-               private dataPrepService: DataPrepService) {
+               private dataPrepService: DataPrepService,
+               translate: TranslateService) {
     this.gapiService.onLoad().subscribe();
+    // this language will be used as a fallback when a translation isn't found in the current language
+    translate.setDefaultLang('en');
+
+    // the lang to use, if the lang isn't available, it will use the current loader to get them
+    translate.use('en');
   }
   public signIn() {
     this.googleFilesService.signIn();
